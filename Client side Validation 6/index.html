@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Registration Form</title>
+    <meta name="description" content="A premium client-side form validation implementation">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+    
+    <div class="container">
+        <!-- Form Container -->
+        <div class="form-container" id="formContainer">
+            <div class="form-header">
+                <h1>Create Account</h1>
+                <p>Please fill in your details to get started.</p>
+            </div>
+            
+            <form id="registrationForm" novalidate>
+                
+                <!-- Section 1: Personal Information -->
+                <div class="form-section">
+                    <h2><span class="icon">👤</span> Personal Information</h2>
+                    
+                    <div class="input-group">
+                        <div class="input-field">
+                            <input type="text" id="fullName" name="fullName" placeholder=" ">
+                            <label for="fullName">Full Name</label>
+                            <span class="error-message" id="fullNameError"></span>
+                        </div>
+                    </div>
+
+                    <div class="input-row">
+                        <div class="input-field">
+                            <input type="date" id="dob" name="dob" placeholder=" ">
+                            <label for="dob">Date of Birth</label>
+                            <span class="error-message" id="dobError"></span>
+                        </div>
+                        
+                        <div class="input-field gender-field">
+                            <select id="gender" name="gender">
+                                <option value="" disabled selected>Select Gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Other</option>
+                                <option value="prefer-not-say">Prefer not to say</option>
+                            </select>
+                            <label class="select-label" for="gender">Gender</label>
+                            <span class="error-message" id="genderError"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 2: Account Information -->
+                <div class="form-section">
+                    <h2><span class="icon">🔐</span> Account Information</h2>
+                    
+                    <div class="input-group">
+                        <div class="input-field">
+                            <input type="email" id="email" name="email" placeholder=" ">
+                            <label for="email">Email Address</label>
+                            <span class="error-message" id="emailError"></span>
+                        </div>
+                    </div>
+
+                    <div class="input-row">
+                        <div class="input-field">
+                            <input type="password" id="password" name="password" placeholder=" ">
+                            <label for="password">Password</label>
+                            <span class="error-message" id="passwordError"></span>
+                        </div>
+                        
+                        <div class="input-field">
+                            <input type="password" id="confirmPassword" name="confirmPassword" placeholder=" ">
+                            <label for="confirmPassword">Confirm Password</label>
+                            <span class="error-message" id="confirmPasswordError"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 3: Additional Details -->
+                <div class="form-section">
+                    <h2><span class="icon">📝</span> Additional Details</h2>
+                    
+                    <div class="input-group">
+                        <div class="input-field">
+                            <textarea id="address" name="address" rows="3" placeholder=" "></textarea>
+                            <label for="address">Full Address</label>
+                            <span class="error-message" id="addressError"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="terms" name="terms">
+                            <label for="terms">I agree to the <a href="#">Terms & Conditions</a></label>
+                            <span class="error-message" id="termsError"></span>
+                        </div>
+                        
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="privacy" name="privacy">
+                            <label for="privacy">I accept the <a href="#">Privacy Policy</a></label>
+                            <span class="error-message" id="privacyError"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn" id="submitBtn">
+                    <span>Complete Registration</span>
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+            </form>
+        </div>
+
+        <!-- Success Message Container (Hidden by Default) -->
+        <div class="success-container hidden" id="successContainer">
+            <div class="success-icon">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 6L9 17L4 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <h2>Registration Successful!</h2>
+            <p>All fields have been validated. Your form was submitted perfectly.</p>
+            <button class="reset-btn" id="resetBtn">Register Another</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

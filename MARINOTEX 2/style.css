@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f6f8;
+    color: #333;
+}
+
+.hero {
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin: 15px 0;
+}
+
+.btn {
+    display: inline-block;
+    background: #ff9800;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.about {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.about h2 {
+    margin-bottom: 15px;
+}
+
+.details {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    width: 220px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+.register {
+    background: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.register form {
+    max-width: 400px;
+    margin: auto;
+}
+
+.register input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+}
+
+.register button {
+    width: 100%;
+    padding: 12px;
+    background: #1e3c72;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}

@@ -1,0 +1,96 @@
+:root {
+    --primary-color: #4f46e5;
+    --primary-hover: #4338ca;
+    --bg-color: #f3f4f6;
+    --card-bg: #ffffff;
+    --text-color: #1f2937;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+.card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 1.25rem;
+    border-bottom: 2px solid var(--bg-color);
+    padding-bottom: 0.5rem;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+    margin-top: 1rem;
+}
+
+button:hover {
+    background-color: var(--primary-hover);
+}
+
+.box {
+    width: 150px;
+    height: 100px;
+    background-color: #e5e7eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+/* Dynamic classes added via JS */
+.new-style {
+    background-color: #10b981;
+    color: white;
+    border-color: #059669;
+    transform: scale(1.05);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    margin: 0;
+    padding: 0;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling in JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Event Handling Demonstration</h1>
+        
+        <div class="event-section">
+            <h2>1. Click Event</h2>
+            <button id="clickBtn">Click Me!</button>
+            <p id="clickResult" class="result-text">Waiting for click...</p>
+        </div>
+
+        <div class="event-section">
+            <h2>2. Hover Event (Mouseover/Mouseout)</h2>
+            <div id="hoverBox" class="interactive-box">
+                Hover over me!
+            </div>
+            <p id="hoverResult" class="result-text">Waiting for hover...</p>
+        </div>
+
+        <div class="event-section">
+            <h2>3. Keypress Event</h2>
+            <input type="text" id="keyInput" placeholder="Type something here...">
+            <p id="keyResult" class="result-text">Waiting for keypress...</p>
+        </div>
+
+        <div class="event-section">
+            <h2>4. Submit Event</h2>
+            <form id="demoForm">
+                <input type="text" id="formName" placeholder="Enter your name" required>
+                <button type="submit">Submit Form</button>
+            </form>
+            <p id="submitResult" class="result-text">Waiting for submission...</p>
+        </div>
+
+        <div class="event-section contest-section">
+            <h2>5. 🏆 Speed Clicking Contest!</h2>
+            <p>Click the button as many times as possible in 5 seconds to win!</p>
+            <div class="contest-layout">
+                <div class="contest-controls">
+                    <button id="startContestBtn" class="start-btn">Start Contest</button>
+                    <button id="clickContestBtn" class="contest-btn" disabled>Click Me!</button>
+                </div>
+                <div class="contest-info">
+                    <div class="stat-box">Time: <span id="timeLeft">5</span>s</div>
+                    <div class="stat-box">Score: <span id="clickScore">0</span></div>
+                </div>
+            </div>
+            
+            <div id="contestResult" class="contest-result hidden">
+                <img src="C:/Users/S Vijayaragavan/.gemini/antigravity/brain/990d73ec-c402-449f-ad02-6afc68fa6006/contest_trophy_1773731103139.png" alt="Trophy" class="trophy-img">
+                <p>Time's up! You clicked <strong><span id="finalScore">0</span></strong> times!</p>
+                <p id="contestMessage" class="contest-message"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
